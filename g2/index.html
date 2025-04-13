@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>U.S Solar Employment Growth</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!-- 引入 Highcharts 套件 -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<!-- 圖表容器 -->
+<figure class="highcharts-figure">
+  <div id="container"></div>
+  <p class="highcharts-description">
+      臺中市溼季熱、沈悶和多雲時陰，旱季溫暖和晴時多雲。全年溫度一般在 12°C 至 34°C 的範圍内，很少低於 8°C 或高於 36°C。
+      根據旅游得分，到訪臺中市進行溫暖天氣活動的最佳時間是10月上旬至12月上旬。
+  </p>
+</figure>
+
+<!-- 長條圖腳本 -->
+<script>
+Highcharts.chart('container', {
+  chart: {type: 'column'},
+  title: {text: '臺中市月平均溫度'},
+  xAxis: {categories: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],title: {text: '月份'}},
+  yAxis: {min: 0,title: {text: '平均溫度 (°C)'}},
+  series: [{name: '平均溫度',data: [16, 17, 20, 24, 27, 29, 30, 30, 28, 25, 22, 18],color: '#ADD8E6'  // 淺藍色
+  }]
+});
+</script>
+
+</body>
+</html>
